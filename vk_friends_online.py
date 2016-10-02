@@ -1,5 +1,5 @@
 import vk
-import time
+from getpass import getpass
 
 
 APP_ID = 5648564
@@ -10,7 +10,7 @@ def get_user_login():
 
 
 def get_user_password():
-    return input('Enter your password: ')
+    return getpass('Enter your password: ')
 
 
 def get_online_friends(login, password):
@@ -39,4 +39,5 @@ if __name__ == '__main__':
     except vk.exceptions.VkAuthError as error:
         print('Invalid login or password.')
         exit()
-    output_friends_to_console(friends_online)
+    else:
+        output_friends_to_console(friends_online)

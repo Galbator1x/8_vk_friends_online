@@ -20,4 +20,3 @@ Requirements
 ------------
 
 - Python >= 3.4
-- vk==2.0.2
